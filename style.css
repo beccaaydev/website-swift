@@ -93,6 +93,9 @@ header {
   display: flex;
   align-items: center;
   column-gap: 2rem;
+
+  flex-shrink: 0; /* IMPEDE que a navbar seja espremida */
+  flex-grow: 0;
 }
 
 .navbar a {
@@ -101,6 +104,13 @@ header {
   color: var(--text-color);
   padding: 0.5rem 1rem;
   text-decoration: none;
+}
+
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .navbar a:hover,
@@ -116,6 +126,97 @@ header {
   cursor: pointer;
   z-index: 10001;
   display: none;
+}
+.search-bar {
+  max-width: fit-content;
+}
+
+.search-wrapper {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.search-box {
+  position: relative;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.search-input {
+  border: 2px solid #eee;
+  border-radius: 30px;
+  padding: 15px 25px;
+  padding-right: 50px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--light-orange-color);
+  box-shadow: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus-within .search-icon {
+  color: var(--light-orange-color);
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.search-box:focus-within .suggestions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.suggestion-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: #f8f9fa;
+}
+
+.suggestion-item i {
+  margin-right: 10px;
+  color: #666;
+}
+
+.recent-searches {
+  color: #666;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  background: #f8f9fa;
+  border-radius: 15px 15px 0 0;
 }
 
 .profile {
@@ -318,6 +419,7 @@ header {
   transition: background 0.5s;
 }
 
+/* CHAT BOT BOTÃO */
 .chat-bot .chat-fab-button {
   position: fixed;
   bottom: 25px;
@@ -340,13 +442,6 @@ header {
   color: white;
   /* Tamanho do ícone */
   font-size: 30px;
-}
-
-/* Efeito de Hover (Opcional: Aumentar o destaque) */
-.material-symbols-rounded:hover {
-  background-color: #f06630; /* Um pouco mais claro ou mais escuro ao passar o mouse */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35); /* Sombra um pouco maior */
-  transform: translateY(-2px); /* Efeito sutil de levantar */
 }
 
 .categories-container {
@@ -824,6 +919,42 @@ header {
   .customer-banner {
     min-height: 500px;
   }
+
+  header {
+    padding: 12px 4%;
+  }
+
+  #menu-icon {
+    display: initial;
+  }
+
+  .navbar {
+    position: absolute;
+    top: -570px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+    transition: 0.2s all linear;
+    align-items: start;
+  }
+  .navbar a {
+    padding: 1rem;
+    margin: 1rem;
+    display: block;
+  }
+  .navbar a:hover,
+  .navbar .home-active {
+    border-radius: 0.8rem;
+
+    color: var(--bg-color);
+  }
+
+  .navbar.active {
+    top: 100%;
+  }
 }
 @media (max-width: 1165px) {
   .profile span {
@@ -896,42 +1027,6 @@ header {
 }
 
 @media (max-width: 878px) {
-  header {
-    padding: 12px 4%;
-  }
-
-  #menu-icon {
-    display: initial;
-  }
-
-  .navbar {
-    position: absolute;
-    top: -570px;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background: var(--bg-color);
-    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
-    transition: 0.2s all linear;
-    align-items: start;
-  }
-  .navbar a {
-    padding: 1rem;
-    margin: 1rem;
-    display: block;
-  }
-  .navbar a:hover,
-  .navbar .home-active {
-    border-radius: 0.8rem;
-
-    color: var(--bg-color);
-  }
-
-  .navbar.active {
-    top: 100%;
-  }
-
   .home-text h1 {
     font-size: 1.7rem;
   }
