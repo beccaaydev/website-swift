@@ -318,6 +318,37 @@ header {
   transition: background 0.5s;
 }
 
+.chat-bot .chat-fab-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50% 50% 10% 50%;
+  background-color: #dc4509; /* Sua cor orange-color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilização do Ícone dentro do Botão */
+.bi-robot {
+  /* Cor do ícone */
+  color: white;
+  /* Tamanho do ícone */
+  font-size: 30px;
+}
+
+/* Efeito de Hover (Opcional: Aumentar o destaque) */
+.material-symbols-rounded:hover {
+  background-color: #f06630; /* Um pouco mais claro ou mais escuro ao passar o mouse */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35); /* Sombra um pouco maior */
+  transform: translateY(-2px); /* Efeito sutil de levantar */
+}
+
 .categories-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, auto));
@@ -784,6 +815,16 @@ header {
   padding: 20px;
 }
 
+@media (max-width: 3124px) {
+  .customer-banner {
+    min-height: 600px;
+  }
+}
+@media (max-width: 1541px) {
+  .customer-banner {
+    min-height: 500px;
+  }
+}
 @media (max-width: 1165px) {
   .profile span {
     display: none;
