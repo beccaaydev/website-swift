@@ -935,11 +935,24 @@ ul {
   .customer-banner {
     min-height: 500px;
   }
+  .profile span {
+    display: none;
+  }
+
+  .profile .bx {
+    display: none;
+  }
 
   header {
     padding: 12px 4%;
   }
 
+  .navbar.active {
+    top: 100%;
+  }
+}
+
+@media (max-width: 1245px) {
   #menu-icon {
     display: initial;
   }
@@ -956,26 +969,21 @@ ul {
     transition: 0.2s all linear;
     align-items: start;
   }
+
   .navbar a {
     padding: 1rem;
     margin: 1rem;
     display: block;
   }
+
   .navbar a:hover,
   .navbar .home-active {
     border-radius: 0.8rem;
-
     color: var(--bg-color);
   }
-
-  .navbar.active {
-    top: 100%;
-  }
 }
+
 @media (max-width: 1165px) {
-  .profile span {
-    display: none;
-  }
   .navbar a {
     padding: 0.5rem 0.8rem;
   }
@@ -1004,6 +1012,7 @@ ul {
     min-height: 100vh;
     padding-top: 50px;
     padding-bottom: 500px; /* Adiciona espaço extra abaixo do texto para a parte inferior da imagem (ajuste este valor!) */
+    padding-right: 5%;
   }
 
   /* Ajuste o layout do conteúdo para a nova disposição (vertical) */
@@ -1107,10 +1116,6 @@ ul {
     display: flex;
   }
 
-  .profile .bx {
-    display: none;
-  }
-
   .hero-banner {
     min-height: 520px; /* Redução adicional para telas muito pequenas */
   }
@@ -1179,6 +1184,12 @@ ul {
   }
   .logo img {
     size: 100px;
+  }
+  .search-wrapper {
+    max-width: 190px;
+  }
+  .search-input {
+    padding: 12px 25px;
   }
   .about {
     min-height: 20px;
