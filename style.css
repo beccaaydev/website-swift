@@ -101,15 +101,6 @@ header {
   column-gap: 2rem;
 }
 
-.navbar.nav-about {
-  justify-content: center;
-  flex-grow: 1;
-}
-.navbar.nav-clientes {
-  justify-content: center;
-  flex-grow: 1;
-}
-
 .navbar a {
   font-size: 1rem;
   font-weight: 500;
@@ -429,31 +420,6 @@ ul {
   border-radius: 5rem;
   color: #fff;
   transition: background 0.5s;
-}
-
-/* CHAT BOT BOTÃO */
-.chat-bot .chat-fab-button {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50% 50% 10% 50%;
-  background-color: #dc4509; /* Sua cor orange-color */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Estilização do Ícone dentro do Botão */
-.bi-robot {
-  /* Cor do ícone */
-  color: white;
-  /* Tamanho do ícone */
-  font-size: 30px;
 }
 
 .categories-container {
@@ -809,7 +775,6 @@ ul {
   font-weight: 600;
 }
 
-/* FOOTER 1 */
 .footer {
   max-width: 968px;
   text-decoration: none;
@@ -922,8 +887,89 @@ ul {
   margin-top: 30px;
   padding: 20px;
 }
+/* fim */
 
-/* FIM DO FOOTER */
+/* INICIO DA SEGUNDA VERSAO DE FOOTER */
+.gradient-footer {
+  background: var(--light-orange-color);
+}
+
+.col-lg-4 img {
+  max-width: 130px;
+  padding-bottom: 25px;
+}
+
+.lojas-item {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 15px;
+  margin-bottom: 20px;
+}
+
+.lojas-item i {
+  font-size: 22px;
+  flex-shrink: 0;
+  line-height: 1;
+  opacity: 0.75;
+}
+
+.lojas-item p {
+  /* Permite que o texto ocupe o espaço restante */
+  flex-grow: 1;
+
+  /* Remove margens extras que podem causar desalinhamento */
+  margin: 0;
+
+  /* Garante que o texto fique sempre à esquerda, como na Foto 2 */
+  text-align: left;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.newsletter-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  box-shadow: none;
+}
+
+.input-group i {
+  color: var(--light-orange-color);
+}
 
 @media (max-width: 3124px) {
   .about {
