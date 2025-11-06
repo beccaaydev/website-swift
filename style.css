@@ -242,7 +242,6 @@ ul {
 .profile .dropdown {
   position: absolute;
   top: 100%;
-
   right: 0;
   background: var(--bg-color);
   border-radius: 8px;
@@ -251,7 +250,6 @@ ul {
   min-width: 160px;
   list-style: none;
   padding: 8px 0;
-
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;
@@ -277,6 +275,37 @@ ul {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.chat-bot .chat-fab-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50% 50% 10% 50%;
+  background-color: #dc4509; /* Sua cor orange-color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilização do Ícone dentro do Botão */
+.bi-robot {
+  /* Cor do ícone */
+  color: white;
+  /* Tamanho do ícone */
+  font-size: 30px;
+}
+
+/* Efeito de Hover (Opcional: Aumentar o destaque) */
+.material-symbols-rounded:hover {
+  background-color: #f06630; /* Um pouco mais claro ou mais escuro ao passar o mouse */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35); /* Sombra um pouco maior */
+  transform: translateY(-2px); /* Efeito sutil de levantar */
 }
 
 /* ESTILOS DO BANNER PRINCIPAL */
@@ -646,7 +675,7 @@ ul {
 .about {
   width: 100%;
   min-height: 100vh;
-  margin-top: 80px;
+  margin-top: 10 px;
   background-image: url("./imagens/about-us.png");
   background-size: cover;
   background-position: center center;
@@ -654,7 +683,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 5%;
+  margin-bottom: 5%;
 }
 
 .about-content {
@@ -690,7 +719,7 @@ ul {
   width: 100%;
   min-height: 400px;
   height: auto;
-  margin-top: 75px;
+  margin-top: 60px;
   background-image: url("./imagens/clientes-banner.png");
   background-size: cover;
   background-position: center center;
